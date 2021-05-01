@@ -1,4 +1,4 @@
-#Avalanche Remote Access
+# Avalanche Remote Access
 
 Port 9560 is used to access the Avalanche JSON API, and it is restricted to localhost by default. Rightly so: you don't want to allow anyone to play at will with your node.
 
@@ -17,7 +17,7 @@ All of this is actually a bit complicated to set up, which is why I wrote an ins
 At first, I thought I could use some flavour of mod\_proxy but kept running into issues, so I switched to a CGI wrapper script. Ungainly, but functional; inefficient, but who cares. And we don't really have a PKI, not even a full certification authority, because we only need to sign certificates. Should you need to change them, just uninstall/reinstall with the script and _voilà_, you get new certificates--the former ones become invalid.
 
 
-##Example
+## Example
 
 Using Curl to access the `health.getLiveness` method on a node named `my-avalanche-node`, you would add the SSL/TLS-related flags and change the URI to an URL by adding `https://`:
 
